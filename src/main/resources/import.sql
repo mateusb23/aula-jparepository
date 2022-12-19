@@ -1,5 +1,5 @@
-INSERT INTO TB_USERS(NAME,EMAIL,SALARY) VALUES ('Maria','maria@gmail.com',1348.74);
-INSERT INTO TB_USERS(NAME,EMAIL,SALARY) VALUES ('Joao Silva','joao@gmail.com',9276.62);
+INSERT INTO TB_USERS(NAME,EMAIL,SALARY) VALUES ('Adriana','adrianah@gmail.com',1348.74);
+INSERT INTO TB_USERS(NAME,EMAIL,SALARY) VALUES ('Adriana Silva','adrianas@gmail.com',9276.62);
 INSERT INTO TB_USERS(NAME,EMAIL,SALARY) VALUES ('Carlos Silva','carlos@gmail.com',7318.75);
 INSERT INTO TB_USERS(NAME,EMAIL,SALARY) VALUES ('Adriana','adriana@gmail.com',10688.93);
 INSERT INTO TB_USERS(NAME,EMAIL,SALARY) VALUES ('Karina','karina@gmail.com',7251.28);

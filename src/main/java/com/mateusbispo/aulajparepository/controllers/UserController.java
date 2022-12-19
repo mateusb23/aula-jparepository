@@ -37,4 +37,17 @@ public class UserController {
 		return ResponseEntity.ok(result);
 	}
 	
+	@GetMapping(value = "/search-salary")
+	public ResponseEntity<Page<User>> searchBySalary(
+			@RequestParam(defaultValue = "0") Double minSalary, 
+			@RequestParam(defaultValue = "1000000000000") Double maxSalary, Pageable pageable) {
+		Page<User> result = userRepository.searchSalary(minSalary, maxSalary, pageable);
+		return ResponseEntity.ok(result);
+	}
+	
+	@GetMapping(value = "/search-name")
+	public ResponseEntity<Page<User>> searchByName(
+			
+	}
+	
 }
