@@ -7,6 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mateusbispo.aulajparepository.entities.User;
@@ -47,7 +48,10 @@ public class UserController {
 	
 	@GetMapping(value = "/search-name")
 	public ResponseEntity<Page<User>> searchByName(
-			
+			@RequestParam(defaultValue = "") String name, Pageable pageable) {
+		Page<User> result = userRepository.searchName(name, pageable);
+		return ResponseEntity.ok(result);
 	}
+			
 	
 }
