@@ -14,4 +14,11 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 	@Query("SELECT obj FROM User obj WHERE LOWER(obj.name) LIKE LOWER(CONCAT('%',:name,'%'))")
 	Page<User> searchName(String name, Pageable pageable);
+	
+	// FAZENDO COM QUERY METHODS
+	
+	Page<User> findBySalaryBetween(Double minsalary, Double maxSalary, Pageable pageable); // FAZ A MESMA COISA QUE O MÉTODO DA LINHA 12, POIS JÁ ESTÁ PRÉ-CONFIGURADO PELO SPRING, BASTA COLOCAR O NOME CERTO NO MÉTODO.
+
+	Page<User> findByNameContainingIgnoreCase(String name, Pageable pageable);
+	
 }
